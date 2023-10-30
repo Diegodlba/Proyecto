@@ -21,4 +21,5 @@ public interface IProductoService {
     Producto updateProducto(Producto productoNew,Long id) throws BadRequestException,ResourceNotFoundException;
 
 
+
 }

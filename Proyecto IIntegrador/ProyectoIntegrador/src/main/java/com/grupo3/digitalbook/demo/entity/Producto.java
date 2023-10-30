@@ -1,5 +1,6 @@
 package com.grupo3.digitalbook.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -42,7 +43,9 @@ public class Producto {
     @JoinColumn(name = "id_marca_producto", referencedColumnName = "id")
     private MarcaProducto marcaProducto;
 
-    @OneToMany(mappedBy = "producto", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+
+    @OneToMany(/*mappedBy = "producto",*/ cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @JoinColumn(name = "id_imagen_producto", referencedColumnName = "id")
     private List<ImagenProducto> imagenProductos;
 
 }

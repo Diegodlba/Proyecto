@@ -1,5 +1,6 @@
 package com.grupo3.digitalbook.demo.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -23,6 +24,7 @@ public class ImagenProducto {
     private String ruta;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "producto_id")
     private Producto producto;
 }

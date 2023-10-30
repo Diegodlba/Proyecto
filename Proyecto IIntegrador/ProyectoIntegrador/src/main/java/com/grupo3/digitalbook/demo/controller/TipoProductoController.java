@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/tipoProducto")
+@CrossOrigin(origins = "http://localhost:5173", maxAge = 3600)
 public class TipoProductoController {
 
     TipoProductoService tipoProductoService;

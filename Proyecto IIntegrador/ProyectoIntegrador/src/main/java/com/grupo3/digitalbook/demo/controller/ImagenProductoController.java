@@ -10,6 +10,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/imagenProducto")
+@CrossOrigin(origins = "http://localhost:5173", maxAge = 3600)
 public class ImagenProductoController {
 
 

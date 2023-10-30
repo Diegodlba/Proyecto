@@ -15,7 +15,10 @@
 
     @RestController
     @RequestMapping("/productos")
+    @CrossOrigin(origins = "http://localhost:5173", maxAge = 3600)
     public class ProductoController {
+
+
         @Autowired
         private IProductoService iProductoService;
 
